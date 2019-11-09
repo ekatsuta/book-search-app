@@ -1,6 +1,6 @@
-#Book Search Application
+# Book Search Application
 
-This Command Line application allows you to use the Google Books API to search for books and construct your own reading list.
+This Command Line application allows you to use the [Google Books API](https://developers.google.com/books/docs/v1/getting_started) to search for books and construct your own reading list.
 
 The application allows you to:
 - Type in a query and display a list of 5 books matching the query.
@@ -11,6 +11,7 @@ The application allows you to:
 ## Instructions
 1. Clone the repository
 2. Run `bundle install`
+3. Run `rake db:migrate`
 3. On your terminal, type `ruby bin/run.rb` to start the Application
 
 ## Built with
