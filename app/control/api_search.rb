@@ -6,17 +6,25 @@ def search_for_book(book)
     puts "Sorry, we have no record of this book. Please try again..."
     search_for_book_option
   else
-    system "clear"
-    books = books[0...5]
-    @book_hashes = []
-    book_result = books.each_with_index do |book, index|
-      new_index = index + 1
-      puts "Book index: #{new_index}"
-      book_hash = get_book_info(book, new_index)
-      @book_hashes << book_hash
-      show_book(book_hash)
-      puts"*********************************"
-    end
+    clear_and_get_books(books)
+  end
+end
+
+def clear_and_get_books(all_books)
+  system "clear"
+  books = all_books[0...5]
+  display_book_options(books)
+end
+
+def display_book_options(books)
+  @book_hashes = []
+  book_result = books.each_with_index do |book, index|
+    new_index = index + 1
+    puts "Book index: #{new_index}"
+    book_hash = get_book_info(book, new_index)
+    @book_hashes << book_hash
+    show_book(book_hash)
+    puts"*********************************"
   end
 end
 
